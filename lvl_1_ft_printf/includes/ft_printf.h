@@ -16,6 +16,7 @@
 # include "../libft/libft.h"
 # include <stdarg.h>
 # include <limits.h>
+# include <stdio.h>
 
 int		ft_printf(const char *__format, ...);
 int		prt_str(char const *str);
