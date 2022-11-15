@@ -5,12 +5,12 @@
 [ft_printf en_subject](https://github.com/Kuninoto/ft_printf/blob/master/extras/en.subject_ft_printf.pdf)
 
 #### ft_printf() Available Specifiers:  
-`%c` - Prints a single character
-`%s` - Prints a string
-`%p` - Prints a pointer adress
-`%d` or `%i` - Prints a signed integer
-`%u` - Prints an unsigned integer
-`%x` or `%X` - Prints an unsigned integer in hexadecimal format
+`%c` - Prints a single character  
+`%s` - Prints a string  
+`%p` - Prints a pointer adress  
+`%d` or `%i` - Prints a signed integer  
+`%u` - Prints an unsigned integer  
+`%x` or `%X` - Prints an unsigned integer in hexadecimal format  
 
 #### Makefile Available Targets:  
 `make` or `make all` - Makes _libftprintf.a_    
