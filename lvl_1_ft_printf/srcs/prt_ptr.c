@@ -15,7 +15,7 @@
 int	prt_ptr(void *ptr_addr)
 {
 	if (ptr_addr == 0)
-		return (write(1, "(nil)", 5));
+		return (write(1, "0x0", 3));
 	write(1, "0x", 2);
 	return (prt_hexa((unsigned long int)ptr_addr, false) + 2);
 }

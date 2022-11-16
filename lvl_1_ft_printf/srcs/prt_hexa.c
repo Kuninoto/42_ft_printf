@@ -17,14 +17,14 @@ static int	rev_print(char *hexa)
 	int	len;
 	int	rtrn;
 
-	len = ft_strlen(hexa);
+	len = ft_strlen(hexa) - 1;
 	rtrn = 0;
 	while (len >= 0)
 		rtrn += write(1, &hexa[len--], 1);
 	return (--rtrn);
 }
 
-int	prt_hexa(unsigned long nbr, bool upper_case)
+int	prt_hexa(unsigned int nbr, bool upper_case)
 {
 	int		conv_to_af;
 	int		i;
@@ -48,5 +48,5 @@ int	prt_hexa(unsigned long nbr, bool upper_case)
 		nbr = nbr / 16;
 	}
 	hexa[i] = '\0';
-	return (rev_print(hexa));
+	return (rev_print(hexa) + 1);
 }

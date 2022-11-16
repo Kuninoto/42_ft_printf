@@ -23,6 +23,6 @@ int		prt_str(char const *str);
 int		prt_ptr(void *ptr_addr);
 int		prt_int(int n);
 int		prt_unsigned(unsigned int nbr);
-int		prt_hexa(unsigned long nbr, bool upper_case);
+int		prt_hexa(unsigned int nbr, bool upper_case);
 
 #endif
