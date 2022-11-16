@@ -6,7 +6,7 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:34:14 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/16 21:52:04 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2022/11/16 22:45:41 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	rev_print(char *hexa)
 	return (--rtrn);
 }
 
-int	prt_hexa(unsigned long nbr, bool upper_case)
+int	prt_hexa(unsigned int nbr, bool upper_case)
 {
 	int		conv_to_af;
 	int		i;
