@@ -22,7 +22,7 @@
 
 ###  Tests: 
 [printfTester](https://github.com/Tripouille/printfTester)  
-<img src="" width="50%"/>
+<img src="https://github.com/Kuninoto/42_ft_printf/blob/master/extras/printfTester.png" width="50%"/>
 
 
 ---
