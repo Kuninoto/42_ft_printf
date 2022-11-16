@@ -34,7 +34,7 @@ int	prt_int(int n)
 	int		len;
 
 	if (n == INT_MIN)
-		return ((write (1, "-2147483648", 12) - 1));
+		return ((write (1, "-2147483648", 11)));
 	if (n == 0)
 		return (write (1, "0", 1));
 	digits = ft_digits(n);
