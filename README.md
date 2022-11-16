@@ -20,6 +20,10 @@
 
 ##### To keep track of what's inside your resulting _libftprintf.a_ run `ar -t libftprintf.a`  
 
+###  Tests: 
+[printfTester](https://github.com/Tripouille/printfTester)  
+<img src="" width="50%"/>
+
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  

@@ -6,7 +6,7 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 12:24:06 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/15 22:54:22 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2022/11/16 22:50:21 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,3 @@ int	ft_printf(const char *__format, ...)
 	va_end(args);
 	return (len);
 }
-
