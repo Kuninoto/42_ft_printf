@@ -1,8 +1,7 @@
 # ft_printf (42Porto - 42Cursus) <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg" title="C" alt="C Logo" width="55" height="55" align="right" />&nbsp;
 ## Grade: 100/100
 
-###  Subject:
-[ft_printf en_subject](./extras/en.subject_ft_printf.pdf)
+###  Subject: [ft_printf en_subject](./extras/en.subject_ft_printf.pdf)
 
 #### ft_printf() Available Specifiers:  
 `%c` - Prints a single character  
