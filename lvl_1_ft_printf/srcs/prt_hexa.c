@@ -6,47 +6,42 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:34:14 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/16 22:45:41 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/24 21:04:47 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int	rev_print(char *hexa)
+static size_t	h_digits(unsigned int n)
 {
-	int	len;
-	int	rtrn;
+	size_t	digits;
 
-	len = ft_strlen(hexa) - 1;
-	rtrn = 0;
-	while (len >= 0)
-		rtrn += write(1, &hexa[len--], 1);
-	return (--rtrn);
+	digits = 0;
+	if (n == 0)
+		digits += 1;
+	while (n != 0)
+	{
+		digits += 1;
+		n /= 16;
+	}
+	return (digits);
+}
+
+static void	put_hexa(unsigned int nbr, bool upper_case)
+{
+	char	upper_digits[] = "0123456789ABCDEF";
+	char	lower_digits[] = "0123456789abcdef";
+
+	if (nbr >= 16)
+		put_hexa((nbr / 16), upper_case);
+	if (upper_case == true)
+		write(STDOUT_FILENO, &upper_digits[nbr % 16], 1);
+	else
+		write(STDOUT_FILENO, &lower_digits[nbr % 16], 1);
 }
 
 int	prt_hexa(unsigned int nbr, bool upper_case)
 {
-	int		conv_to_af;
-	int		i;
-	int		temp;
-	char	hexa[42];
-
-	if (upper_case == true)
-		conv_to_af = 55;
-	else
-		conv_to_af = 87;
-	i = 0;
-	if (nbr == 0)
-		return (write(1, "0", 1));
-	while (nbr != 0)
-	{
-		temp = nbr % 16;
-		if (temp < 10)
-			hexa[i++] = temp + 48;
-		else
-			hexa[i++] = temp + conv_to_af;
-		nbr = nbr / 16;
-	}
-	hexa[i] = '\0';
-	return (rev_print(hexa) + 1);
+	put_hexa(nbr, upper_case);
+	return (h_digits(nbr));
 }

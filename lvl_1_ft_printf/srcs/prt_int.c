@@ -6,52 +6,48 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:44:02 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/15 21:21:22 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/24 21:01:47 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int	ft_digits(int n)
+static size_t	i_digits(int n)
 {
-	int	digits;
+	size_t	digits;
 
 	digits = 0;
 	if (n <= 0)
-		digits++;
+		digits += 1;
 	while (n != 0)
 	{
-		n = n / 10;
-		digits++;
+		n /= 10;
+		digits += 1;
 	}
 	return (digits);
 }
 
+static void	put_int(int n)
+{
+	char	digits[] = "0123456789";
+
+	if (n > 9)
+		put_int(n / 10);
+	write(STDOUT_FILENO, &digits[n % 10], 1);
+}
+
 int	prt_int(int n)
 {
-	size_t	digits;
-	char	*result;
-	int		len;
+	int	len;
 
 	if (n == INT_MIN)
-		return ((write (1, "-2147483648", 11)));
-	if (n == 0)
-		return (write (1, "0", 1));
-	digits = ft_digits(n);
-	len = digits;
-	result = malloc((digits + 1) * sizeof(char));
-	result[digits--] = '\0';
+		return ((write (STDOUT_FILENO, "-2147483648", 11)));
+	len = i_digits(n);
 	if (n < 0)
 	{
-		n = n * -1;
-		result[0] = '-';
+		write(STDOUT_FILENO, "-", 1);
+		n *= -1;
 	}
-	while (n != 0)
-	{
-		result[digits--] = (n % 10) + 48;
-		n = n / 10;
-	}
-	write(1, result, len);
-	free(result);
+	put_int(n);
 	return (len);
 }
