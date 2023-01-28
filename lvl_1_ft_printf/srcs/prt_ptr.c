@@ -6,19 +6,19 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:01:49 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2023/01/24 21:05:49 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/28 13:30:59 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
-static size_t p_digits(unsigned long long n)
+static size_t	p_digits(unsigned long long n)
 {
 	size_t	digits;
 
 	digits = 0;
 	if (n == 0)
-		digits += 1;
+		return (1);
 	while (n != 0)
 	{
 		digits += 1;
@@ -29,7 +29,7 @@ static size_t p_digits(unsigned long long n)
 
 static void	put_ptr(unsigned long long addr)
 {
-	char	digits[] = "0123456789abcdef";
+	static char	digits[] = "0123456789abcdef";
 
 	if (addr >= 16)
 		put_ptr(addr / 16);

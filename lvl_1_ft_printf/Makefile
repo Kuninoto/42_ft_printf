@@ -6,12 +6,12 @@
 #    By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/13 12:39:20 by nnuno-ca          #+#    #+#              #
-#    Updated: 2023/01/24 20:21:15 by nnuno-ca         ###   ########.fr        #
+#    Updated: 2023/01/28 13:31:50 by nnuno-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./includes/
 RM = rm -rf
 NAME = libftprintf.a
 

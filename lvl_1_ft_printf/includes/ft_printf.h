@@ -6,14 +6,14 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 12:25:10 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/16 22:45:46 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/28 13:31:39 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../libft/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 # include <limits.h>
 # include <stdio.h>

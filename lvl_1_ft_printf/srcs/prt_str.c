@@ -6,11 +6,11 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 01:08:11 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2022/11/15 02:12:45 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/28 13:31:05 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	prt_str(char const *str)
 {
