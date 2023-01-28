@@ -6,11 +6,11 @@
 /*   By: nnuno-ca <nnuno-ca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:10:56 by nnuno-ca          #+#    #+#             */
-/*   Updated: 2023/01/24 21:09:12 by nnuno-ca         ###   ########.fr       */
+/*   Updated: 2023/01/28 13:31:12 by nnuno-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static size_t	u_digits(unsigned int n)
 {
@@ -29,7 +29,7 @@ static size_t	u_digits(unsigned int n)
 
 void	put_unsigned(unsigned int nbr)
 {
-	char	digits[] = "0123456789";
+	static char	digits[] = "0123456789";
 
 	if (nbr > 9)
 		put_unsigned(nbr / 10);
