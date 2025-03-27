@@ -14,6 +14,21 @@ Libc's printf() basic replica.
 `%u` - Prints an unsigned integer  
 `%x` or `%X` - Prints an unsigned integer in hexadecimal format  
 
+### Installing and running the project:
+
+1- Clone this repository
+	
+	git clone https://github.com/Kuninoto/42_ft_printf
+2- Run `make`
+
+   	make
+3- Run `make clean` so that you don't keep the object files that you won't need anymore
+
+	make clean
+4- Compile your project (e.g. `main.c`) with your new `libftprintf.a`
+
+	cc -Wall -Wextra -Werror main.c libftprintf.a
+
 #### Makefile:  
 Being `ft_printf()` an addition to the personal library started on [Libft](https://github.com/Kuninoto/42_Libft), the provided Makefile compiles them together.
 
